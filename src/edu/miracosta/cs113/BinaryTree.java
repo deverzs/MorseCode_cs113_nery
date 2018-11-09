@@ -19,10 +19,34 @@ public class BinaryTree<E> implements Serializable {
             this.right = null ;
         }
 
+
+
         public  String toString() {
             return data.toString() ;
         }
 
+        public Node<E> getLeft() {
+            return  left ;
+        }
+
+        public Node<E> getRight() {
+            return right ;
+        }
+
+        public E getData() {
+            return data ;
+        }
+
+        public void setRight(Node<E> node) {
+            this.right = node ;
+        }
+
+        public void setData(E data) {
+            this.data = data ;
+        }
+        public void setLeft(Node<E> node) {
+            this.left = node ;
+        }
     } // end Node
 
 
@@ -55,8 +79,6 @@ public class BinaryTree<E> implements Serializable {
 
         if (root !=null && root.left != null) {
             return new BinaryTree<E>(root.left) ;
-
-            //return new BinaryTree<E>(null) ;
         } else  {
             return null ;
         }
@@ -68,8 +90,6 @@ public class BinaryTree<E> implements Serializable {
     public  BinaryTree<E> getRightSubtree() {
         if (root !=null && root.right != null) {
             return new BinaryTree<E>(root.right) ;
-
-            //return new BinaryTree<E>(null) ;
         } else  {
             return null ;
         }
